@@ -62,7 +62,7 @@ __device__ __forceinline__ OffsetT MergePath(KeyIteratorT keys1,
     KeyT key1   = keys1[mid];
     KeyT key2   = keys2[diag - 1 - mid];
     bool pred   = binary_pred(key2, key1);
-
+    
     if (pred)
     {
       keys1_end = mid;

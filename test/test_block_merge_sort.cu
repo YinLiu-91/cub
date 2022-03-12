@@ -304,6 +304,38 @@ void Test(unsigned int num_items,
 {
   thrust::sequence(d_data.begin(), d_data.end());
   thrust::shuffle(d_data.begin(), d_data.end(), rng);
+  d_data[0 ]=5;
+  d_data[1 ]=19;
+  d_data[2 ]=12;
+  d_data[3 ]=24;
+  d_data[4 ]=0;
+  d_data[5 ]=7;
+  d_data[6 ]=18;
+  d_data[7 ]=30;
+  d_data[8 ]=29;
+  d_data[9 ]=15;
+  d_data[10]=10;
+  d_data[11]=25;
+  d_data[12]=27;
+  d_data[13]=23;
+  d_data[14]=17;
+  d_data[15]=26;
+  d_data[16]=20;
+  d_data[17]=21;
+  d_data[18]=11;
+  d_data[19]=16;
+  d_data[20]=6;
+  d_data[21]=31;
+  d_data[22]=2;
+  d_data[23]=14;
+  d_data[24]=13;
+  d_data[25]=9;
+  d_data[26]=28;
+  d_data[27]=1;
+  d_data[28]=22;
+  d_data[29]=4;
+  d_data[30]=8;
+  d_data[31]=3;
 
   BlockMergeSortTest<DataType, ItemsPerThread, ThreadsInBlock>(
       thrust::raw_pointer_cast(d_data.data()), num_items);
